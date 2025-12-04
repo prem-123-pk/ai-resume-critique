@@ -2,7 +2,8 @@ import streamlit as st
 import PyPDF2
 import io
 import os
-from google import genai
+# from google import genai
+from google.genai import Client
 from dotenv import load_dotenv
 
 
@@ -67,7 +68,7 @@ def analyze_resume_hf(resume_text, role):
     # MAX_INPUT_CHARS = 2000
     # prompt = prompt[:MAX_INPUT_CHARS]
     # result = generator(prompt, max_length=500)[0]['generated_text']
-    client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    client = Client(api_key=os.getenv("GEMINI_API_KEY"))
     response = client.models.generate_content(
         model="gemini-2.5-flash-lite",
         contents=prompt
