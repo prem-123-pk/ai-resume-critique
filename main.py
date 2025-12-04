@@ -2,7 +2,7 @@ import streamlit as st
 import PyPDF2
 import io
 import os
-from google import genai
+from google.genai import genai
 from dotenv import load_dotenv
 
 
