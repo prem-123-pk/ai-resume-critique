@@ -10,8 +10,8 @@ load_dotenv()
 st.set_page_config(page_title="AI_Resume_Critiquer", page_icon="📃", layout="centered")
 st.title("AI Resume Critiquer")
 st.markdown("Upload your resume to get AI-powered feedback tailored to your needs!")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 uploaded_file = st.file_uploader("Upload your resume (PDF or TXT)", type=["pdf", "txt"])
 job_role = st.text_input("Enter the role you're aiming for (optional)")
