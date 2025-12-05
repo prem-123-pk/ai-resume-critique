@@ -37,7 +37,8 @@ def analyze_resume_hf(resume_text, role):
     # 2. Skills presentation
     # 3. Experience descriptions
     # 4. Specific improvements for {role if role else 'general job applications'}
-    # 5. Improvements needed
+    # 5. Improvements needed 
+    # 6. Generate an ATS score at last
     # Resume content:
     # {resume_text}
     # """
